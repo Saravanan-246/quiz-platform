@@ -1,0 +1,86 @@
+/* ===============================
+   GLOBAL RESET
+================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===============================
+   BASE DOCUMENT
+================================ */
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;   /* prevent horizontal scroll */
+  overflow-y: auto;
+
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #0b0b14;
+  color: #ffffff;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===============================
+   ROOT APP CONTAINER
+================================ */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===============================
+   FULL SCREEN SECTION
+================================ */
+.full-screen {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ===============================
+   BUTTON RESET (SAFE)
+================================ */
+button {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ===============================
+   INPUT RESET (SAFE)
+================================ */
+input {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  background: none;
+}
+
+/* ===============================
+   SCROLLBAR (SUBTLE)
+================================ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}

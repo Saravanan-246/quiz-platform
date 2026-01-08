@@ -1,0 +1,202 @@
+/* ===============================
+   PAGE
+================================ */
+.round-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #064e3b, #047857);
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+/* ===============================
+   MAIN LAYOUT
+================================ */
+.round-layout {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: flex-start; /* IMPORTANT FIX */
+}
+
+/* ===============================
+   LEFT – QUESTION CARD
+================================ */
+.round-left {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.18);
+  color: #ecfdf5;
+  height: fit-content; /* IMPORTANT FIX */
+}
+
+.round-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.round-question {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #bbf7d0;
+  margin-bottom: 18px;
+}
+
+/* ===============================
+   INPUT
+================================ */
+.round-input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  margin-bottom: 14px;
+  outline: none;
+  background: #ffffff;
+  color: #022c22;
+}
+
+.round-input:focus {
+  box-shadow: 0 0 0 3px rgba(34,197,94,0.35);
+}
+
+/* ===============================
+   MARK FOR REVIEW
+================================ */
+.mark-btn {
+  display: inline-block;
+  margin-bottom: 22px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid #22c55e;
+  background: transparent;
+  color: #bbf7d0;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mark-btn.marked {
+  background: #22c55e;
+  color: #022c22;
+}
+
+/* ===============================
+   NAV BUTTONS
+================================ */
+.round-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.round-actions button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  background: #22c55e;
+  color: #022c22;
+}
+
+.round-actions .secondary {
+  background: rgba(255,255,255,0.25);
+  color: #ecfdf5;
+}
+
+.round-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===============================
+   RIGHT – QUESTION PANEL
+================================ */
+.round-panel {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 24px;
+  border: 1px solid rgba(255,255,255,0.16);
+  color: #ecfdf5;
+  height: fit-content;
+}
+
+.panel-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* ===============================
+   PANEL STATS
+================================ */
+.panel-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+  color: #a7f3d0;
+  margin-bottom: 16px;
+}
+
+/* ===============================
+   QUESTION GRID
+================================ */
+.question-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.q-box {
+  padding: 10px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: transparent;
+  color: #ecfdf5;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* STATES */
+.q-box.answered {
+  background: #22c55e;
+  color: #022c22;
+}
+
+.q-box.marked {
+  background: #facc15;
+  color: #78350f;
+}
+
+.q-box.current {
+  outline: 2px solid #4ade80;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 900px) {
+  .round-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .round-left,
+  .round-panel {
+    padding: 24px;
+  }
+
+  .question-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
